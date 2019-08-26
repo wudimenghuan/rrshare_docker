@@ -14,10 +14,10 @@ RUN apk update && \
  	apk --no-cache add glibc-${GLIBC_VERSION}.apk && \
 	apk --no-cache add glibc-bin-${GLIBC_VERSION}.apk && \
 	mkdir -p /tmp && \
-	mkdir -p /opt/rrshare && \
+	mkdir -p /rrshare && \
 	mkdir -p /opt/work/store && \
 	wget -q http://appdown.rrys.tv/rrshareweb_centos7.tar.gz -O /tmp/rrshareweb_centos7.tar.gz && \
-	tar -zxvf /tmp/rrshareweb_centos7.tar.gz -C /opt/rrshare/ && \
+	tar -zxvf /tmp/rrshareweb_centos7.tar.gz -C /rrshare/ && \
 	rm -rf /tmp/rrshareweb_centos7.tar.gz && \
 	apk del wget tzdata && \
 	rm -rf /glibc-${GLIBC_VERSION}.apk && \
@@ -27,4 +27,4 @@ WORKDIR /
 VOLUME ["/opt/work/store"]
 EXPOSE 3001 6714 30210
 
-CMD ["sh", "-c", "/opt/rrshare/rrshareweb/rrshareweb"]
+CMD ["sh", "-c", "/rrshare/rrshareweb/rrshareweb"]
