@@ -13,7 +13,7 @@ RUN apk update && \
 	wget -q https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VERSION}/glibc-bin-${GLIBC_VERSION}.apk && \
  	apk --no-cache add glibc-${GLIBC_VERSION}.apk && \
 	apk --no-cache add glibc-bin-${GLIBC_VERSION}.apk && \
-	mkdir -p /tmp/rrshare && \
+	mkdir -p /tmp && \
 	mkdir -p /opt/rrshare && \
 	mkdir -p /opt/work/store && \
 	wget -q http://appdown.rrys.tv/rrshareweb_centos7.tar.gz -O /tmp/rrshareweb_centos7.tar.gz && \
