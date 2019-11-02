@@ -1,4 +1,4 @@
-FROM alpine:20190809
+FROM alpine:20190925
 
 LABEL MAINTAINER="shikong <wudimenghuan@gmail.com>"
 
